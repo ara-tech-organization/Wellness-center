@@ -2,17 +2,13 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -20,53 +16,64 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl md:text-2xl font-playfair font-bold text-wellness-violet">
-              Adhi Mind Wellness Centre
-            </h1>
+            <Link to="/">
+              <h1 className="text-xl md:text-2xl font-bold text-wellness-violet">
+                Adhi Mind Wellness Centre
+              </h1>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+            <Link
+              to="/"
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+              }`}
             >
               Home
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+            </Link>
+            <Link
+              to="/about"
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+              }`}
             >
               About
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+            </Link>
+            <Link
+              to="/services"
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+              }`}
             >
               Services
-            </button>
-            <button
-              onClick={() => scrollToSection('approach')}
-              className="text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+            </Link>
+            <Link
+              to="/approach"
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+              }`}
             >
               Approach
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+            </Link>
+            <Link
+              to="/contact"
+              className={`transition-colors duration-200 font-medium ${
+                isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+              }`}
             >
               Contact
-            </button>
+            </Link>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-6 py-2 rounded-full transition-all duration-200"
-            >
-              Book a Session
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-6 py-2 rounded-full transition-all duration-200">
+                Book a Session
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -86,42 +93,56 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t">
             <nav className="flex flex-col space-y-4">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="text-left text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+              <Link
+                to="/"
+                className={`text-left transition-colors duration-200 font-medium ${
+                  isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-left text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+              </Link>
+              <Link
+                to="/about"
+                className={`text-left transition-colors duration-200 font-medium ${
+                  isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 About
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="text-left text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+              </Link>
+              <Link
+                to="/services"
+                className={`text-left transition-colors duration-200 font-medium ${
+                  isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Services
-              </button>
-              <button
-                onClick={() => scrollToSection('approach')}
-                className="text-left text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+              </Link>
+              <Link
+                to="/approach"
+                className={`text-left transition-colors duration-200 font-medium ${
+                  isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Approach
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-left text-gray-700 hover:text-wellness-violet transition-colors duration-200 font-medium"
+              </Link>
+              <Link
+                to="/contact"
+                className={`text-left transition-colors duration-200 font-medium ${
+                  isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </button>
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-6 py-2 rounded-full transition-all duration-200 w-fit"
-              >
-                Book a Session
-              </Button>
+              </Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Button className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-6 py-2 rounded-full transition-all duration-200 w-fit">
+                  Book a Session
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

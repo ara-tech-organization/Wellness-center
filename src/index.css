@@ -103,7 +103,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-poppins;
   }
 }
 
@@ -121,5 +121,23 @@
 
   .text-shadow {
     text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .floating-animation {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 5px #D8B4F8; }
+    50% { box-shadow: 0 0 20px #D8B4F8, 0 0 30px #D8B4F8; }
   }
 }

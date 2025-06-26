@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
@@ -10,13 +10,22 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/">
+            <Link to="/" onClick={handleNavClick}>
               <h1 className="text-xl md:text-2xl font-bold text-wellness-violet">
                 Adhi Mind Wellness Centre
               </h1>
@@ -27,6 +36,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <Link
               to="/"
+              onClick={handleNavClick}
               className={`transition-colors duration-200 font-medium ${
                 isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
               }`}
@@ -35,6 +45,7 @@ const Header = () => {
             </Link>
             <Link
               to="/about"
+              onClick={handleNavClick}
               className={`transition-colors duration-200 font-medium ${
                 isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
               }`}
@@ -43,6 +54,7 @@ const Header = () => {
             </Link>
             <Link
               to="/services"
+              onClick={handleNavClick}
               className={`transition-colors duration-200 font-medium ${
                 isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
               }`}
@@ -51,6 +63,7 @@ const Header = () => {
             </Link>
             <Link
               to="/approach"
+              onClick={handleNavClick}
               className={`transition-colors duration-200 font-medium ${
                 isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
               }`}
@@ -59,6 +72,7 @@ const Header = () => {
             </Link>
             <Link
               to="/contact"
+              onClick={handleNavClick}
               className={`transition-colors duration-200 font-medium ${
                 isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
               }`}
@@ -69,7 +83,7 @@ const Header = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/contact">
+            <Link to="/contact" onClick={handleNavClick}>
               <Button className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-6 py-2 rounded-full transition-all duration-200">
                 Book a Session
               </Button>
@@ -98,7 +112,7 @@ const Header = () => {
                 className={`text-left transition-colors duration-200 font-medium ${
                   isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 Home
               </Link>
@@ -107,7 +121,7 @@ const Header = () => {
                 className={`text-left transition-colors duration-200 font-medium ${
                   isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 About
               </Link>
@@ -116,7 +130,7 @@ const Header = () => {
                 className={`text-left transition-colors duration-200 font-medium ${
                   isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 Services
               </Link>
@@ -125,7 +139,7 @@ const Header = () => {
                 className={`text-left transition-colors duration-200 font-medium ${
                   isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 Approach
               </Link>
@@ -134,11 +148,11 @@ const Header = () => {
                 className={`text-left transition-colors duration-200 font-medium ${
                   isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
                 }`}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={handleNavClick}
               >
                 Contact
               </Link>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/contact" onClick={handleNavClick}>
                 <Button className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-6 py-2 rounded-full transition-all duration-200 w-fit">
                   Book a Session
                 </Button>

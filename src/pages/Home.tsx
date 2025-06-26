@@ -21,12 +21,12 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
           <div className="mb-8" data-aos="zoom-in" data-aos-delay="200">
-            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center floating-animation border-4 border-white/30">
-              <img 
+            <div className="w-3 h-32 md:w-4 md:h-4 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center floating-animation border-4 border-white/30">
+              {/* <img 
                 src="/lovable-uploads/c7ed723a-aa7b-4557-81e4-e192a1dfb969.png" 
                 alt="Adhi Mind Wellness Centre Logo" 
                 className="w-24 h-24 md:w-32 md:h-32 object-contain"
-              />
+              /> */}
             </div>
           </div>
 

@@ -21,18 +21,20 @@ const Home = () => {
         {/* Hero Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1200">
           <div className="mb-8" data-aos="zoom-in" data-aos-delay="200">
-            <div className="w-28 h-28 md:w-36 md:h-36 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center floating-animation border-4 border-white/30">
-              <div className="w-20 h-20 md:w-24 md:h-24 bg-white rounded-full flex items-center justify-center shadow-lg">
-                <Brain className="w-10 h-10 md:w-12 md:h-12 text-wellness-violet" />
-              </div>
+            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center floating-animation border-4 border-white/30">
+              <img 
+                src="/lovable-uploads/c7ed723a-aa7b-4557-81e4-e192a1dfb969.png" 
+                alt="Adhi Mind Wellness Centre Logo" 
+                className="w-24 h-24 md:w-32 md:h-32 object-contain"
+              />
             </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 text-shadow leading-tight" data-aos="fade-up" data-aos-delay="400">
-            Empowering Minds.
+            Transform Within.
             <br />
             <span className="text-wellness-sparkle bg-gradient-to-r from-wellness-sparkle to-white bg-clip-text text-transparent">
-              Cultivating Clarity.
+              Thrive Beyond.
             </span>
           </h1>
 

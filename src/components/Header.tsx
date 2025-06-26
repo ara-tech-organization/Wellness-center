@@ -26,9 +26,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" onClick={handleNavClick}>
-              <h1 className="text-xl md:text-2xl font-bold text-wellness-violet">
-                Adhi Mind Wellness Centre
-              </h1>
+              <img 
+                src="/lovable-uploads/c7ed723a-aa7b-4557-81e4-e192a1dfb969.png" 
+                alt="Adhi Mind Wellness Centre Logo" 
+                className="h-12 md:h-16 w-auto"
+              />
             </Link>
           </div>
 

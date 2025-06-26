@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,6 +99,27 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .wellness-gradient {
+    background: linear-gradient(135deg, #D8B4F8 0%, #3C005A 100%);
+  }
+
+  .sparkle-bg {
+    background-image: radial-gradient(circle at 20% 80%, #EAD6FF 2px, transparent 2px),
+                      radial-gradient(circle at 80% 20%, #EAD6FF 1px, transparent 1px),
+                      radial-gradient(circle at 40% 40%, #EAD6FF 1px, transparent 1px);
+    background-size: 200px 200px, 150px 150px, 100px 100px;
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 }

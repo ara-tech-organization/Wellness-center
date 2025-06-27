@@ -35,7 +35,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-8 text-center">
             <Link
               to="/"
               onClick={handleNavClick}

@@ -259,7 +259,7 @@ const Services = () => {
                 </Button>
               </Link>
               <Link to="/approach">
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-wellness-violet px-6 py-3 rounded-full font-semibold text-base">
+                <Button variant="outline" size="lg" className="border-white text-wellness-violet hover:bg-white hover:text-wellness-violet px-6 py-3 rounded-full font-semibold text-base">
                   Learn About Our Methods
                 </Button>
               </Link>

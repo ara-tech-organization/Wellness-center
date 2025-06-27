@@ -141,3 +141,24 @@
     50% { box-shadow: 0 0 20px #D8B4F8, 0 0 30px #D8B4F8; }
   }
 }
+
+/* For Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Optional: track background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3C005A;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1; /* Optional: spacing effect */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3C005A #f1f1f1;
+}

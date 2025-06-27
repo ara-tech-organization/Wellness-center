@@ -259,7 +259,7 @@ const Approach = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-white text-wellness-violet hover:bg-white/90 px-6 py-3 rounded-full font-semibold text-base">
+                <Button size="lg" className="bg-white text-wellness-violet hover:bg-white/90 px-3 py-3 rounded-full font-semibold text-base">
                   Schedule a Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>

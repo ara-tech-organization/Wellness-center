@@ -26,9 +26,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" onClick={handleNavClick}>
-              <img 
-                src="/lovable-uploads/c7ed723a-aa7b-4557-81e4-e192a1dfb969.png" 
-                alt="Adhi Mind Wellness Centre Logo" 
+              <img
+                src={`${import.meta.env.BASE_URL}lovable-uploads/c7ed723a-aa7b-4557-81e4-e192a1dfb969.png`}
+                alt="Adhi Mind Wellness Centre Logo"
                 className="h-12 md:h-16 w-auto"
               />
             </Link>
@@ -39,45 +39,40 @@ const Header = () => {
             <Link
               to="/"
               onClick={handleNavClick}
-              className={`transition-colors duration-200 font-medium ${
-                isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-              }`}
+              className={`transition-colors duration-200 font-medium ${isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
             >
               Home
             </Link>
             <Link
               to="/about"
               onClick={handleNavClick}
-              className={`transition-colors duration-200 font-medium ${
-                isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-              }`}
+              className={`transition-colors duration-200 font-medium ${isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
             >
               About
             </Link>
             <Link
               to="/services"
               onClick={handleNavClick}
-              className={`transition-colors duration-200 font-medium ${
-                isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-              }`}
+              className={`transition-colors duration-200 font-medium ${isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
             >
               Services
             </Link>
             <Link
               to="/approach"
               onClick={handleNavClick}
-              className={`transition-colors duration-200 font-medium ${
-                isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-              }`}
+              className={`transition-colors duration-200 font-medium ${isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
             >
               Approach
             </Link>
             <Link
               to="/contact"
               onClick={handleNavClick}
-              className={`transition-colors duration-200 font-medium ${
-                isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-              }`}
+              className={`transition-colors duration-200 font-medium ${isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                }`}
             >
               Contact
             </Link>
@@ -111,45 +106,40 @@ const Header = () => {
             <nav className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className={`text-left transition-colors duration-200 font-medium ${
-                  isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-                }`}
+                className={`text-left transition-colors duration-200 font-medium ${isActive('/') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                  }`}
                 onClick={handleNavClick}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className={`text-left transition-colors duration-200 font-medium ${
-                  isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-                }`}
+                className={`text-left transition-colors duration-200 font-medium ${isActive('/about') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                  }`}
                 onClick={handleNavClick}
               >
                 About
               </Link>
               <Link
                 to="/services"
-                className={`text-left transition-colors duration-200 font-medium ${
-                  isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-                }`}
+                className={`text-left transition-colors duration-200 font-medium ${isActive('/services') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                  }`}
                 onClick={handleNavClick}
               >
                 Services
               </Link>
               <Link
                 to="/approach"
-                className={`text-left transition-colors duration-200 font-medium ${
-                  isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-                }`}
+                className={`text-left transition-colors duration-200 font-medium ${isActive('/approach') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                  }`}
                 onClick={handleNavClick}
               >
                 Approach
               </Link>
               <Link
                 to="/contact"
-                className={`text-left transition-colors duration-200 font-medium ${
-                  isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
-                }`}
+                className={`text-left transition-colors duration-200 font-medium ${isActive('/contact') ? 'text-wellness-violet' : 'text-gray-700 hover:text-wellness-violet'
+                  }`}
                 onClick={handleNavClick}
               >
                 Contact

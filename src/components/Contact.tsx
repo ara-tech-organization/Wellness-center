@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -9,7 +8,8 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    phone: '',
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -18,7 +18,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -26,15 +26,52 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    const payload = {
+      name: formData.name,
+      emailAddress: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch(
+        'https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/NewMorningStarEnquiry02',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer 123`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const result = await response.json();
+      console.log('API Response:', result);
+
+      if (!result.error) {
+        toast({
+          title: 'Email sent successfully!',
+          description: result.message,
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        toast({
+          title: 'Submission Error',
+          description: result.message,
+          variant: 'destructive',
+        });
+      }
+    } catch (err) {
+      console.error('Fetch error:', err);
       toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. We'll get back to you soon.",
+        title: 'Network Error',
+        description: 'Something went wrong. Please try again later.',
+        variant: 'destructive',
       });
-      setFormData({ name: '', email: '', message: '' });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -122,17 +159,12 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="bg-wellness-light-purple p-6 rounded-2xl" data-aos="fade-left">
-            <h3 className="text-xl font-semibold text-wellness-violet mb-5">
-              Send us a Message
-            </h3>
-            
+            <h3 className="text-xl font-semibold text-wellness-violet mb-5">Send us a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-5">
+              {/* Name */}
               <div data-aos="fade-up" data-aos-delay="200">
-                <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
-                  Full Name *
-                </label>
+                <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">Full Name *</label>
                 <Input
-                  type="text"
                   id="name"
                   name="name"
                   value={formData.name}
@@ -143,14 +175,13 @@ const Contact = () => {
                 />
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="400">
-                <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-1">
-                  Email Address *
-                </label>
+              {/* Email */}
+              <div data-aos="fade-up" data-aos-delay="300">
+                <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-1">Email Address *</label>
                 <Input
-                  type="email"
                   id="email"
                   name="email"
+                  type="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -159,10 +190,23 @@ const Contact = () => {
                 />
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="600">
-                <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">
-                  Message *
-                </label>
+              {/* Phone */}
+              <div data-aos="fade-up" data-aos-delay="400">
+                <label htmlFor="phone" className="block text-xs font-medium text-gray-700 mb-1">Phone *</label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                  className="w-full rounded-lg border-wellness-lavender/30 focus:border-wellness-violet text-sm"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              {/* Message */}
+              <div data-aos="fade-up" data-aos-delay="500">
+                <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">Message *</label>
                 <Textarea
                   id="message"
                   name="message"
@@ -175,7 +219,8 @@ const Contact = () => {
                 />
               </div>
 
-              <div data-aos="fade-up" data-aos-delay="800">
+              {/* Submit Button */}
+              <div data-aos="fade-up" data-aos-delay="600">
                 <Button
                   type="submit"
                   disabled={isSubmitting}

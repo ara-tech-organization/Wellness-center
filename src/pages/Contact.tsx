@@ -11,7 +11,7 @@ const Contact = () => {
     name: '',
     email: '',
     phone: '',
-    message: ''
+    message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -20,7 +20,7 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -28,15 +28,52 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    const payload = {
+      name: formData.name,
+      emailAddress: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch(
+        'https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/NewMorningStarEnquiry02',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer 123`,
+          },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const result = await response.json();
+      console.log('API Response:', result);
+
+      if (!result.error) {
+        toast({
+          title: 'Email sent successfully!',
+          description: result.message,
+        });
+        setFormData({ name: '', email: '', phone: '', message: '' });
+      } else {
+        toast({
+          title: 'Submission Error',
+          description: result.message,
+          variant: 'destructive',
+        });
+      }
+    } catch (err) {
+      console.error('Fetch error:', err);
       toast({
-        title: "Message Sent Successfully!",
-        description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+        title: 'Network Error',
+        description: 'Something went wrong. Please try again later.',
+        variant: 'destructive',
       });
-      setFormData({ name: '', email: '', phone: '', message: '' });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -65,7 +102,7 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold text-wellness-violet mb-8">
                   Contact Information
                 </h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4 p-6 bg-wellness-light-purple rounded-2xl border border-wellness-lavender/20">
                     <div className="w-12 h-12 bg-wellness-violet rounded-full flex items-center justify-center flex-shrink-0">
@@ -132,21 +169,14 @@ const Contact = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-wellness-violet to-wellness-lavender rounded-full flex items-center justify-center mx-auto mb-4">
                   <MessageCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-wellness-violet mb-2">
-                  Send us a Message
-                </h3>
-                <p className="text-gray-600">
-                  We'll respond to your inquiry within 24 hours
-                </p>
+                <h3 className="text-2xl font-bold text-wellness-violet mb-2">Send us a Message</h3>
+                <p className="text-gray-600">We'll respond to your inquiry within 24 hours</p>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
                   <Input
-                    type="text"
                     id="name"
                     name="name"
                     value={formData.name}
@@ -158,13 +188,11 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
                   <Input
-                    type="email"
                     id="email"
                     name="email"
+                    type="email"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -174,13 +202,11 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number *
-                  </label>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
                   <Input
-                    type="tel"
                     id="phone"
                     name="phone"
+                    type="tel"
                     value={formData.phone}
                     onChange={handleInputChange}
                     required
@@ -190,14 +216,12 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message 
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Message </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
-                    onChange={handleInputChange}  
+                    onChange={handleInputChange}
                     rows={5}
                     className="w-full rounded-lg border-wellness-lavender/30 focus:border-wellness-violet resize-none"
                     placeholder="Tell us how we can help you..."
@@ -232,11 +256,11 @@ const Contact = () => {
               Find Us
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Located in the heart of Thanjavur, our centre is easily accessible and provides 
+              Located in the heart of Thanjavur, our centre is easily accessible and provides
               a peaceful environment for your wellness journey.
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto bg-white p-6 rounded-3xl shadow-lg">
             <div className="aspect-video bg-gray-200 rounded-2xl overflow-hidden">
               <iframe
@@ -272,7 +296,7 @@ const Contact = () => {
                 How do I schedule my first appointment?
               </h3>
               <p className="text-gray-700">
-                You can contact us via phone, email, or the contact form above. We'll schedule 
+                You can contact us via phone, email, or the contact form above. We'll schedule
                 a brief consultation to understand your needs and match you with the most appropriate service.
               </p>
             </div>
@@ -282,7 +306,7 @@ const Contact = () => {
                 What should I expect in my first session?
               </h3>
               <p className="text-gray-700">
-                Your first session involves discussing your goals, concerns, and background. 
+                Your first session involves discussing your goals, concerns, and background.
                 This helps us create a personalized treatment plan tailored to your specific needs.
               </p>
             </div>
@@ -292,7 +316,7 @@ const Contact = () => {
                 Do you offer online sessions?
               </h3>
               <p className="text-gray-700">
-                Yes, we offer secure online sessions for clients who prefer remote consultations 
+                Yes, we offer secure online sessions for clients who prefer remote consultations
                 or cannot visit our physical location. Please inquire when booking your appointment.
               </p>
             </div>

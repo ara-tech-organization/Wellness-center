@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -87,10 +88,10 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-wellness-lavender/20 mt-8 pt-8 text-center">
           <p className="text-wellness-sparkle">
-            © 2025 Adhi Mind Wellness Centre. All Rights Reserved.
+           © 2025 Aadhi Mind Wellness Center. All rights reserved. 
           </p>
           <p className="text-wellness-sparkle/80 text-sm mt-2">
-            Professional mental wellness services with compassion and care.
+             <Link to="https://discovertechnologies.co/" className="inline-block">Website created by ARA Discover Technologies - A unit of ARA Discoveries Pvt. Ltd.</Link>
           </p>
         </div>
       </div>

@@ -175,7 +175,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <Input
                     type="tel"
@@ -183,6 +183,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
+                    required
                     className="w-full rounded-lg border-wellness-lavender/30 focus:border-wellness-violet"
                     placeholder="Enter your phone number"
                   />
@@ -190,14 +191,13 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    Message 
                   </label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
-                    onChange={handleInputChange}
-                    required
+                    onChange={handleInputChange}  
                     rows={5}
                     className="w-full rounded-lg border-wellness-lavender/30 focus:border-wellness-violet resize-none"
                     placeholder="Tell us how we can help you..."

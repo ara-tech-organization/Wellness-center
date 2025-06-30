@@ -30,7 +30,7 @@ const Home = () => {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 text-shadow leading-tight" data-aos="fade-up" data-aos-delay="400">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 text-shadow leading-tight" data-aos="fade-up" data-aos-delay="400">
             Transform Within.
             <br />
             <span className="text-wellness-sparkle bg-gradient-to-r from-wellness-sparkle to-white bg-clip-text text-transparent">
@@ -38,7 +38,7 @@ const Home = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-white/95 mb-12 max-w-3xl mx-auto leading-relaxed font-medium" data-aos="fade-up" data-aos-delay="600">
+          <p className="text-xl md:text-xl text-white/95 mb-12 max-w-2xl mx-auto leading-relaxed font-medium" data-aos="fade-up" data-aos-delay="600">
             A sanctuary for emotional healing, mental wellness, and personal transformation. 
             Discover your inner strength and embrace life with renewed purpose and joy.
           </p>
@@ -142,7 +142,7 @@ const Home = () => {
               </ul>
               <Link to="/services" className="inline-block">
                 <Button className="bg-wellness-violet hover:bg-wellness-violet/90 text-white text-lg px-4 py-3 rounded-full">
-                  Explore Counselling <ArrowRight className="w-5 h-5 ml-2" />
+                  Explore Counselling <ArrowRight className="w-5 h-5 ml-2"/>
                 </Button>
               </Link>
             </div>
@@ -244,13 +244,13 @@ const Home = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16" data-aos="fade-up" data-aos-delay="400">
               <Link to="/contact">
-                <Button size="lg" className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-10 py-4 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <Button size="lg" className="bg-wellness-violet hover:bg-wellness-violet/90 text-white px-4 py-4 rounded-full font-bold text-xl shadow-lg hover:shadow-xl transition-all duration-300">
                   Schedule a Consultation
                   <Phone className="w-6 h-6 ml-3" />
                 </Button>
               </Link>
               <Link to="/about">
-                <Button variant="outline" size="lg" className="border-2 border-wellness-violet text-wellness-violet hover:bg-wellness-violet hover:text-white px-10 py-4 rounded-full font-bold text-xl transition-all duration-300">
+                <Button variant="outline" size="lg" className="border-2 border-wellness-violet text-wellness-violet hover:bg-wellness-violet hover:text-white px-4 py-4 rounded-full font-bold text-xl transition-all duration-300">
                   Learn About Our Approach
                   <Zap className="w-6 h-6 ml-3" />
                 </Button>

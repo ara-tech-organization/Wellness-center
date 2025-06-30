@@ -265,7 +265,7 @@ const Approach = () => {
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-wellness-violet px-6 py-3 rounded-full font-semibold text-base">
+                <Button variant="outline" size="lg" className="border-white text-wellness-violet hover:bg-white hover:text-wellness-violet px-6 py-3 rounded-full font-semibold text-base">
                   View Our Services
                 </Button>
               </Link>

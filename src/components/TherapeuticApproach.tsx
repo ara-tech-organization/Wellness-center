@@ -50,7 +50,7 @@ const TherapeuticApproach = () => {
           </div>
 
           <div className="mt-12 p-8 bg-white rounded-2xl shadow-sm border border-wellness-lavender/10">
-            <h3 className="text-2xl font-playfair font-semibold text-wellness-violet mb-4">
+            <h3 className="text-xl font-playfair font-semibold text-wellness-violet mb-4">
               Personalized Care
             </h3>
             <p className="text-gray-700 leading-relaxed">

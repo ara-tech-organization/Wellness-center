@@ -80,7 +80,7 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div data-aos="fade-right">
                 <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="./lovable-uploads/About-img.jpeg"
                   alt="Mental wellness and growth"
                   className="rounded-2xl shadow-lg w-full h-80 object-cover"
                 />

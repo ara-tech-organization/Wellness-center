@@ -144,7 +144,7 @@ const Contact = () => {
               <h4 className="font-semibold text-wellness-violet mb-3 text-sm">Find Us</h4>
               <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.7394087686757!2d79.13682!3d10.78615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a55480f4d0f3c1b%3A0x9a6e7e8f5c6d4b2a!2sMedical%20College%20Road%2C%20Thanjavur%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5666138407673!2d79.1084961745171!3d10.767845659352986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baab96b59b0e18b%3A0x33c23cbe6aa8aa47!2sGAN%20Plaza!5e0!3m2!1sen!2sin!4v1751345380948!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

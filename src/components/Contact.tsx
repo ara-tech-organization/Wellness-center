@@ -82,7 +82,7 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="text-base text-gray-600 max-w-2xl mx-auto">
-            Ready to begin your journey toward mental wellness? We're here to support you every step of the way.
+            Ready to begin your journey toward mental wellness and Personal Tranformation? We're here to support you every step of the way.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold text-wellness-violet mb-5">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-5">
                 <div className="flex items-start space-x-4" data-aos="fade-up" data-aos-delay="200">
                   <div className="w-10 h-10 bg-wellness-lavender rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -117,7 +117,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-wellness-violet mb-1 text-sm">Phone Numbers</h4>
                     <p className="text-gray-700 text-xs">
-                      Personal Mobile: <a href="tel:+919543347345" className="hover:text-wellness-violet transition-colors">95433 47345</a><br />
+                      {/* Personal Mobile: <a href="tel:+919543347345" className="hover:text-wellness-violet transition-colors">95433 47345</a><br /> */}
                       Office Mobile: <a href="tel:+917200175761" className="hover:text-wellness-violet transition-colors">72001 75761</a>
                     </p>
                   </div>
@@ -130,8 +130,9 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-wellness-violet mb-1 text-sm">Email</h4>
                     <p className="text-gray-700 text-xs">
-                      <a href="mailto:lakshmi281985@gmail.com" className="hover:text-wellness-violet transition-colors">
-                        lakshmi281985@gmail.com
+                      <a href="mailto:adhimindwellnesscentre@gmail.com" className="hover:text-wellness-violet transition-colors">
+                                          adhimindwellnesscentre@gmail.com
+
                       </a>
                     </p>
                   </div>

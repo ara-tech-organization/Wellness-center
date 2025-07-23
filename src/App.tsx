@@ -16,6 +16,8 @@ import NotFound from "./pages/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useLocation } from 'react-router-dom';
+import Gallery from "./pages/Gallery";
+import FloatingButtons from "./components/FloatingButtons";
 
 const queryClient = new QueryClient();
 
@@ -34,7 +36,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/Wellness-center">
+        <BrowserRouter basename="/">
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow">
@@ -43,10 +45,12 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/approach" element={<Approach />} />
+                           <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
+            <FloatingButtons/>
             <Footer />
           </div>
         </BrowserRouter>

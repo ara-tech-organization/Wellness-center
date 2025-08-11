@@ -18,47 +18,32 @@ const Footer = () => {
               Adhi Mind Wellness Centre
             </h3>
             <p className="text-wellness-sparkle leading-relaxed mb-6">
-              Empowering minds and cultivating clarity through compassionate, 
+              Empowering minds and cultivating clarity through compassionate,
               evidence-based mental wellness care in Thanjavur.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-playfair font-semibold mb-4">Quick Links</h4>
-            <nav className="space-y-3">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="block text-wellness-sparkle hover:text-white transition-colors duration-200"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="block text-wellness-sparkle hover:text-white transition-colors duration-200"
-              >
-                About Us
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="block text-wellness-sparkle hover:text-white transition-colors duration-200"
-              >
-                Our Services
-              </button>
-              <button
-                onClick={() => scrollToSection('approach')}
-                className="block text-wellness-sparkle hover:text-white transition-colors duration-200"
-              >
-                Therapeutic Approach
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="block text-wellness-sparkle hover:text-white transition-colors duration-200"
-              >
-                Contact Us
-              </button>
-            </nav>
-          </div>
+  <h4 className="text-lg font-playfair font-semibold mb-4">Quick Links</h4>
+  <nav className="space-y-3">
+    <Link to="/" className="block text-wellness-sparkle hover:text-white transition-colors duration-200">
+      Home
+    </Link>
+    <Link to="/about" className="block text-wellness-sparkle hover:text-white transition-colors duration-200">
+      About Us
+    </Link>
+    <Link to="/services" className="block text-wellness-sparkle hover:text-white transition-colors duration-200">
+      Our Services
+    </Link>
+    <Link to="/approach" className="block text-wellness-sparkle hover:text-white transition-colors duration-200">
+      Therapeutic Approach
+    </Link>
+    <Link to="/contact" className="block text-wellness-sparkle hover:text-white transition-colors duration-200">
+      Contact Us
+    </Link>
+  </nav>
+</div>
 
           {/* Contact Info */}
           <div>
@@ -72,13 +57,13 @@ const Footer = () => {
               </p>
               <p>
                 <strong className="text-white">Phone:</strong><br />
-                <a href="tel:+919543347345" className="hover:text-white transition-colors">95433 47345</a><br />
+                {/* <a href="tel:+919543347345" className="hover:text-white transition-colors">95433 47345</a><br /> */}
                 <a href="tel:+917200175761" className="hover:text-white transition-colors">72001 75761</a>
               </p>
               <p>
                 <strong className="text-white">Email:</strong><br />
-                <a href="mailto:lakshmi281985@gmail.com" className="hover:text-white transition-colors">
-                  lakshmi281985@gmail.com
+                <a href="mailto:adhimindwellnesscentre@gmail.com" className="hover:text-white transition-colors">
+                  adhimindwellnesscentre@gmail.com
                 </a>
               </p>
             </div>
@@ -88,7 +73,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-wellness-lavender/20 mt-8 pt-8 text-center">
           <p className="text-wellness-sparkle">
-           © 2025 Aadhi Mind Wellness Center. All rights reserved. 
+           © 2025 Adhi Mind Wellness Center. All rights reserved.
           </p>
           <p className="text-wellness-sparkle/80 text-sm mt-2">
              <Link to="https://discovertechnologies.co/" className="inline-block">Website created by ARA Discover Technologies - A unit of ARA Discoveries Pvt. Ltd.</Link>

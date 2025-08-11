@@ -34,7 +34,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/Wellness-center">
+        <BrowserRouter basename="/">
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-grow">

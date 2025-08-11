@@ -43,7 +43,7 @@ const About = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-wellness-violet mb-1">MBA in Human Resource Management</h3>
-                      <p className="text-gray-600 text-sm">Madras University</p>
+                      <p className="text-gray-600 text-sm">Anna University</p>
                     </div>
                   </div>
 
@@ -97,7 +97,7 @@ const About = () => {
                   </p>
 
                   <p className="text-gray-700 leading-relaxed text-sm" data-aos="fade-up" data-aos-delay="400">
-                    Adhi Mind Wellness Centre is dedicated to nurturing mental wellness and enriching the lives of those we serve. It offers a safe, compassionate environment where clients can express themselves freely and without judgment.
+                    Adhi Mind Wellness Centre is dedicated to nurturing mental wellness and enriching the lives of those we serve. It offers a safe, compassionate environment where clients can express themselves freely, without judgment.
                   </p>
 
                   <p className="text-gray-700 leading-relaxed text-sm" data-aos="fade-up" data-aos-delay="600">
@@ -137,7 +137,7 @@ const About = () => {
                 </div>
                 <p className="text-gray-700 leading-relaxed text-base">
                   To touch as many lives as possible, fostering peace and harmony in the hearts
-                  and homes of people everywhere, creating ripples of positive change in our community.
+                  and homes of people everywhere.
                 </p>
               </div>
             </div>

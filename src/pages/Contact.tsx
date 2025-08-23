@@ -86,7 +86,7 @@ const Contact = () => {
               Get in Touch
             </h1>
             <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
-              Ready to begin your journey toward mental wellness? We're here to support you every step of the way.
+              Ready to begin your journey toward mental wellness and Personal Tranformation? We're here to support you every step of the way.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-wellness-violet mb-2">Phone Numbers</h3>
                       <p className="text-gray-700">
-                        <strong>Personal:</strong> <a href="tel:+919543347345" className="hover:text-wellness-violet transition-colors">95433 47345</a><br />
+                        {/* <strong>Personal:</strong> <a href="tel:+919543347345" className="hover:text-wellness-violet transition-colors">95433 47345</a><br /> */}
                         <strong>Office:</strong> <a href="tel:+917200175761" className="hover:text-wellness-violet transition-colors">72001 75761</a>
                       </p>
                     </div>
@@ -139,8 +139,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-wellness-violet mb-2">Email Address</h3>
                       <p className="text-gray-700">
-                        <a href="mailto:lakshmi281985@gmail.com" className="hover:text-wellness-violet transition-colors">
-                          lakshmi281985@gmail.com
+                        <a href="mailto:adhimindwellnesscentre@gmail.com" className="hover:text-wellness-violet transition-colors">
+                          adhimindwellnesscentre@gmail.com
                         </a>
                       </p>
                     </div>
@@ -153,8 +153,8 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold text-wellness-violet mb-2">Office Hours</h3>
                       <p className="text-gray-700">
-                        <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM<br />
-                        <strong>Saturday:</strong> 9:00 AM - 2:00 PM<br />
+                        <strong>Monday - Saturday:</strong> 10:00 AM - 5:00 PM<br />
+                        {/* <strong>Saturday:</strong> 9:00 AM - 2:00 PM<br /> */}
                         <strong>Sunday:</strong> By Appointment Only
                       </p>
                     </div>
@@ -306,8 +306,7 @@ const Contact = () => {
                 What should I expect in my first session?
               </h3>
               <p className="text-gray-700">
-                Your first session involves discussing your goals, concerns, and background.
-                This helps us create a personalized treatment plan tailored to your specific needs.
+               During your initial consultation, we assess your goals, concerns, and medical history to design a personalized care plan that addresses your unique needs.
               </p>
             </div>
 

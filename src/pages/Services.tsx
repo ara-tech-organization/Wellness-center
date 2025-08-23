@@ -51,7 +51,7 @@ const Services = () => {
       features: ["Self-Discovery", "Skill Development", "Life Purpose", "Personal Excellence"]
     },
     {
-      title: "Goal Setting & Achievement",
+      title: "Goal Setting & Achievement Coaching",
       description: "Strategic support to set meaningful, achievable goals and create actionable plans that lead to consistent progress and lasting success.",
       icon: Target,
       features: ["SMART Goals", "Action Planning", "Progress Tracking", "Accountability Support"]
@@ -63,14 +63,14 @@ const Services = () => {
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-wellness-light-purple via-white to-wellness-lavender relative overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
           }}
         >
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-wellness-violet mb-5">
@@ -91,7 +91,7 @@ const Services = () => {
               Counselling Services
             </h2>
             <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              Professional therapeutic support using evidence-based approaches to help you process emotions, 
+              Professional therapeutic support using evidence-based approaches to help you process emotions,
               overcome challenges, and develop healthy coping strategies for lasting mental wellness.
             </p>
           </div>
@@ -145,7 +145,7 @@ const Services = () => {
               Life Coaching Services
             </h2>
             <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              Empowering coaching programs designed to unlock your potential, clarify your goals, 
+              Empowering coaching programs designed to unlock your potential, clarify your goals,
               and provide the tools and accountability you need to create meaningful, lasting change.
             </p>
           </div>
@@ -247,10 +247,10 @@ const Services = () => {
               Take the First Step Toward Transformation
             </h2>
             <p className="text-lg text-white/90 mb-6 leading-relaxed">
-              Whether you're seeking counselling for healing or coaching for growth, we're here to 
+              Whether you're seeking counselling for healing or coaching for growth, we're here to
               provide the professional support you need to thrive.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-wellness-violet hover:bg-white/90 px-6 py-3 rounded-full font-semibold text-base">

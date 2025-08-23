@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Users,
   Award,
@@ -14,6 +15,53 @@ import {
 const About = () => {
   return (
     <div>
+      {/* -- meta tags starts -- */}
+            <Helmet>
+              <title>
+               About - Adhi Mind Wellness Centre
+              </title>
+              <meta
+                name="description"
+                content="Adhi Mind Wellness Centre in Thanjavur offers counselling, life coaching, and mental wellness services for stress, trauma, personal growth, and emotional healing."
+              />
+              <meta
+                name="keywords"
+                content="Adhi Mind Wellness Centre, counselling in Thanjavur, life coaching, stress management, trauma healing, mental wellness Tamil Nadu"
+              />
+              <meta name="author" content="Adhi Mind Wellness Centre" />
+      
+              {/* Open Graph (for social media) */}
+              <meta
+                property="og:title"
+                content="Adhi Mind Wellness Centre - Transform Within, Thrive Beyond"
+              />
+              <meta
+                property="og:description"
+                content="Discover counselling, life coaching, and emotional healing at Adhi Mind Wellness Centre in Thanjavur."
+              />
+              <meta
+                property="og:image"
+                content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
+              />
+              <meta property="og:url" content="https://adhimindwellnesscentre.com/" />
+              <meta property="og:type" content="website" />
+      
+              {/* Twitter Card */}
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta
+                name="twitter:title"
+                content="Adhi Mind Wellness Centre - Mental Wellness in Thanjavur"
+              />
+              <meta
+                name="twitter:description"
+                content="Counselling, life coaching & emotional healing in Thanjavur."
+              />
+              <meta
+                name="twitter:image"
+                content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
+              />
+            </Helmet>
+            {/*-- meta tags ends -- */}
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-wellness-violet to-wellness-lavender text-white relative overflow-hidden">
         {/* Background Image */}

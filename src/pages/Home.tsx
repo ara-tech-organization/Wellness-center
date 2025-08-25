@@ -52,6 +52,7 @@ const reasons = [
     text: "To bring positive changes in your behavior",
   },
   { icon: <TrendingUp size={28} />, text: "To set a goal and move towards it" },
+  { icon: <RefreshCcw size={28} />, text: "To heal your inner child" },
 ];
 
 const Home = () => {

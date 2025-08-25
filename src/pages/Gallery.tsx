@@ -22,12 +22,13 @@ const Gallery = () => {
     "/lovable-uploads/10.jpeg",
     "/lovable-uploads/11.jpeg",
     "/lovable-uploads/12.jpeg",
-    "/lovable-uploads/13.jpeg",
     "/lovable-uploads/14.jpeg",
     "/lovable-uploads/15.jpeg",
     "/lovable-uploads/16.jpeg",
     "/lovable-uploads/17.jpeg",
     "/lovable-uploads/18.jpeg",
+    "/lovable-uploads/19.jpg",
+    "/lovable-uploads/20.jpg",
   ];
 
   return (

@@ -1,131 +1,203 @@
-
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { Brain, Eye, Lightbulb, Target, CheckCircle, ArrowRight, Compass } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import {
+  Brain,
+  Eye,
+  Lightbulb,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Compass,
+  FlagTriangleRight,
+} from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const Approach = () => {
   const therapeuticMethods = [
     {
       name: "Cognitive Behavioural Therapy (CBT)",
-      description: "Evidence-based approach focusing on changing negative thought patterns and behaviors.",
+      description:
+        "Evidence-based approach focusing on changing negative thought patterns and behaviors.",
       icon: Brain,
-      benefits: ["Practical skill development", "Rapid symptom relief", "Long-term coping strategies", "Goal-oriented sessions"],
-      applications: ["Depression & Anxiety", "Phobias & OCD", "Trauma Recovery", "Behavioral Change"]
+      benefits: [
+        "Practical skill development",
+        "Rapid symptom relief",
+        "Long-term coping strategies",
+        "Goal-oriented sessions",
+      ],
+      applications: [
+        "Depression & Anxiety",
+        "Phobias & OCD",
+        "Trauma Recovery",
+        "Behavioral Change",
+      ],
     },
     {
       name: "Rational Emotive Behaviour Therapy (REBT)",
-      description: "Helping individuals identify and change irrational beliefs that cause emotional distress.",
+      description:
+        "Helping individuals identify and change irrational beliefs that cause emotional distress.",
       icon: Lightbulb,
-      benefits: ["Emotional regulation", "Stress resilience", "Self-acceptance", "Rational thinking"],
-      applications: ["Anger Management", "Performance Anxiety", "Self-Esteem Issues", "Life Transitions"]
+      benefits: [
+        "Emotional regulation",
+        "Stress resilience",
+        "Self-acceptance",
+        "Rational thinking",
+      ],
+      applications: [
+        "Anger Management",
+        "Performance Anxiety",
+        "Self-Esteem Issues",
+        "Life Transitions",
+      ],
     },
     {
       name: "Gestalt Therapy",
-      description: "Present-focused therapy emphasizing personal responsibility and self-awareness.",
+      description:
+        "Present-focused therapy emphasizing personal responsibility and self-awareness.",
       icon: Eye,
-      benefits: ["Increased self-awareness", "Emotional integration", "Present moment focus", "Authentic expression"],
-      applications: ["Relationship Issues", "Personal Growth", "Emotional Processing", "Creative Blocks"]
+      benefits: [
+        "Increased self-awareness",
+        "Emotional integration",
+        "Present moment focus",
+        "Authentic expression",
+      ],
+      applications: [
+        "Relationship Issues",
+        "Personal Growth",
+        "Emotional Processing",
+        "Creative Blocks",
+      ],
     },
     {
       name: "Visual-Kinesthetic Techniques",
-      description: "Creative approaches using visual imagery, movement, and sensory experiences.",
+      description:
+        "Creative approaches using visual imagery, movement, and sensory experiences.",
       icon: Target,
-      benefits: ["Creative expression", "Body-mind connection", "Trauma processing", "Holistic healing"],
-      applications: ["Trauma Recovery", "Stress Relief", "Creative Blocks", "Somatic Healing"]
-    }
+      benefits: [
+        "Creative expression",
+        "Body-mind connection",
+        "Trauma processing",
+        "Holistic healing",
+      ],
+      applications: [
+        "Trauma Recovery",
+        "Stress Relief",
+        "Creative Blocks",
+        "Somatic Healing",
+      ],
+    },
+    {
+      name: "Neuro-Linguistic Programming (NLP)",
+      description:
+        "A transformative approach that connects language, thought patterns, and behaviors to achieve personal and professional growth.",
+      icon: FlagTriangleRight,
+      benefits: [
+        "Enhanced communication skills",
+        "Boosted confidence & self-esteem",
+        " Effective stress management",
+        "Improved decision-making",
+      ],
+      applications: [
+        "Personal Development",
+        "Leadership & Coaching",
+        "Stress & Anxiety Management",
+        "Breaking Negative Habits",
+      ],
+    },
   ];
 
   const principles = [
     {
       title: "Individualized Treatment",
-      description: "Every person is unique, and so is their healing journey. We carefully assess your specific needs, goals, and circumstances to create a personalized treatment plan.",
-      icon: "🎯"
+      description:
+        "Every person is unique, and so is their healing journey. We carefully assess your specific needs, goals, and circumstances to create a personalized treatment plan.",
+      icon: "🎯",
     },
     {
       title: "Evidence-Based Practice",
-      description: "Our methods are grounded in scientific research and proven therapeutic approaches, ensuring you receive the most effective care available.",
-      icon: "🔬"
+      description:
+        "Our methods are grounded in scientific research and proven therapeutic approaches, ensuring you receive the most effective care available.",
+      icon: "🔬",
     },
     {
       title: "Holistic Integration",
-      description: "We address the whole person—mind, body, and spirit—recognizing that true wellness encompasses all aspects of your being.",
-      icon: "🌟"
+      description:
+        "We address the whole person—mind, body, and spirit—recognizing that true wellness encompasses all aspects of your being.",
+      icon: "🌟",
     },
     {
       title: "Cultural Sensitivity",
-      description: "We honor and respect your cultural background, beliefs, and values, integrating them thoughtfully into your therapeutic journey.",
-      icon: "🤝"
-    }
+      description:
+        "We honor and respect your cultural background, beliefs, and values, integrating them thoughtfully into your therapeutic journey.",
+      icon: "🤝",
+    },
   ];
 
   return (
     <div>
-    {/* -- meta tags starts -- */}
-          <Helmet>
-            <title>
-              Approach - Adhi Mind Wellness Centre 
-            </title>
-            <meta
-              name="description"
-              content="Adhi Mind Wellness Centre in Thanjavur offers counselling, life coaching, and mental wellness services for stress, trauma, personal growth, and emotional healing."
-            />
-            <meta
-              name="keywords"
-              content="Adhi Mind Wellness Centre, counselling in Thanjavur, life coaching, stress management, trauma healing, mental wellness Tamil Nadu"
-            />
-            <meta name="author" content="Adhi Mind Wellness Centre" />
-    
-            {/* Open Graph (for social media) */}
-            <meta
-              property="og:title"
-              content="Adhi Mind Wellness Centre - Transform Within, Thrive Beyond"
-            />
-            <meta
-              property="og:description"
-              content="Discover counselling, life coaching, and emotional healing at Adhi Mind Wellness Centre in Thanjavur."
-            />
-            <meta
-              property="og:image"
-              content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
-            />
-            <meta property="og:url" content="https://adhimindwellnesscentre.com/" />
-            <meta property="og:type" content="website" />
-    
-            {/* Twitter Card */}
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta
-              name="twitter:title"
-              content="Adhi Mind Wellness Centre - Mental Wellness in Thanjavur"
-            />
-            <meta
-              name="twitter:description"
-              content="Counselling, life coaching & emotional healing in Thanjavur."
-            />
-            <meta
-              name="twitter:image"
-              content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
-            />
-          </Helmet>
-          {/*-- meta tags ends -- */}
+      {/* -- meta tags starts -- */}
+      <Helmet>
+        <title>Approach - Adhi Mind Wellness Centre</title>
+        <meta
+          name="description"
+          content="Adhi Mind Wellness Centre in Thanjavur offers counselling, life coaching, and mental wellness services for stress, trauma, personal growth, and emotional healing."
+        />
+        <meta
+          name="keywords"
+          content="Adhi Mind Wellness Centre, counselling in Thanjavur, life coaching, stress management, trauma healing, mental wellness Tamil Nadu"
+        />
+        <meta name="author" content="Adhi Mind Wellness Centre" />
+
+        {/* Open Graph (for social media) */}
+        <meta
+          property="og:title"
+          content="Adhi Mind Wellness Centre - Transform Within, Thrive Beyond"
+        />
+        <meta
+          property="og:description"
+          content="Discover counselling, life coaching, and emotional healing at Adhi Mind Wellness Centre in Thanjavur."
+        />
+        <meta
+          property="og:image"
+          content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
+        />
+        <meta property="og:url" content="https://adhimindwellnesscentre.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Adhi Mind Wellness Centre - Mental Wellness in Thanjavur"
+        />
+        <meta
+          name="twitter:description"
+          content="Counselling, life coaching & emotional healing in Thanjavur."
+        />
+        <meta
+          name="twitter:image"
+          content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
+        />
+      </Helmet>
+      {/*-- meta tags ends -- */}
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-wellness-violet via-wellness-lavender to-white relative overflow-hidden">
         {/* Background Image */}
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`
+            backgroundImage: `url('https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
           }}
-        >
-        </div>
-        
+        ></div>
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5">
               Our Therapeutic Approach
             </h1>
             <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-              Evidence-based methods tailored to your unique journey of healing and growth
+              Evidence-based methods tailored to your unique journey of healing
+              and growth
             </p>
           </div>
         </div>
@@ -139,8 +211,9 @@ const Approach = () => {
               Proven Therapeutic Methods
             </h2>
             <p className="text-base text-gray-600 max-w-3xl mx-auto">
-              Our counselling sessions integrate multiple evidence-based approaches, carefully selected 
-              and combined to address your specific needs and therapeutic goals.
+              Our counselling sessions integrate multiple evidence-based
+              approaches, carefully selected and combined to address your
+              specific needs and therapeutic goals.
             </p>
           </div>
 
@@ -152,7 +225,7 @@ const Approach = () => {
                 <div
                   key={index}
                   className={`flex flex-col lg:flex-row items-center gap-6 ${
-                    index % 2 === 1 ? 'lg:flex-row-reverse' : ''
+                    index % 2 === 1 ? "lg:flex-row-reverse" : ""
                   }`}
                   data-aos={aosDirection}
                   data-aos-delay={index * 200}
@@ -169,25 +242,35 @@ const Approach = () => {
                     <p className="text-gray-700 leading-relaxed mb-5 text-sm">
                       {method.description}
                     </p>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                       <div>
-                        <h4 className="font-semibold text-wellness-violet mb-2 text-sm">Key Benefits:</h4>
+                        <h4 className="font-semibold text-wellness-violet mb-2 text-sm">
+                          Key Benefits:
+                        </h4>
                         <ul className="space-y-1">
                           {method.benefits.map((benefit, benefitIndex) => (
-                            <li key={benefitIndex} className="flex items-center text-xs text-gray-600">
+                            <li
+                              key={benefitIndex}
+                              className="flex items-center text-xs text-gray-600"
+                            >
                               <CheckCircle className="w-3 h-3 text-wellness-violet mr-2" />
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
-                        <h4 className="font-semibold text-wellness-violet mb-2 text-sm">Applications:</h4>
+                        <h4 className="font-semibold text-wellness-violet mb-2 text-sm">
+                          Applications:
+                        </h4>
                         <ul className="space-y-1">
                           {method.applications.map((application, appIndex) => (
-                            <li key={appIndex} className="flex items-center text-xs text-gray-600">
+                            <li
+                              key={appIndex}
+                              className="flex items-center text-xs text-gray-600"
+                            >
                               <div className="w-1.5 h-1.5 bg-wellness-lavender rounded-full mr-2"></div>
                               {application}
                             </li>
@@ -211,8 +294,8 @@ const Approach = () => {
               Our Core Principles
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              These fundamental beliefs guide our practice and ensure you receive the most effective, 
-              compassionate care possible.
+              These fundamental beliefs guide our practice and ensure you
+              receive the most effective, compassionate care possible.
             </p>
           </div>
 
@@ -252,41 +335,64 @@ const Approach = () => {
             <div className="w-16 h-16 bg-gradient-to-r from-wellness-violet to-wellness-lavender rounded-full flex items-center justify-center mx-auto mb-6">
               <Compass className="w-8 h-8 text-white" />
             </div>
-            
+
             <h2 className="text-2xl md:text-3xl font-bold text-wellness-violet mb-5">
               Personalized Integration
             </h2>
-            
-            <p className="text-base text-gray-700 leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="200">
-              We understand that every individual is unique, with their own story, challenges, and strengths. 
-              Our therapeutic approach is carefully tailored to meet your specific needs, combining different 
-              techniques to create the most effective treatment plan for your personal healing journey.
+
+            <p
+              className="text-base text-gray-700 leading-relaxed mb-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              We understand that every individual is unique, with their own
+              story, challenges, and strengths. Our therapeutic approach is
+              carefully tailored to meet your specific needs, combining
+              different techniques to create the most effective treatment plan
+              for your personal healing journey.
             </p>
 
-            <div className="bg-wellness-light-purple p-6 rounded-2xl border-l-4 border-wellness-violet mb-6" data-aos="fade-up" data-aos-delay="400">
+            <div
+              className="bg-wellness-light-purple p-6 rounded-2xl border-l-4 border-wellness-violet mb-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <p className="text-base font-medium text-wellness-violet italic">
-                "True healing happens when the right therapeutic approach meets the right person at the right time. 
-                Our role is to create that perfect alignment for your unique journey."
+                "True healing happens when the right therapeutic approach meets
+                the right person at the right time. Our role is to create that
+                perfect alignment for your unique journey."
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-center">
               <div className="p-5" data-aos="fade-up" data-aos-delay="600">
                 <div className="text-2xl mb-2">📋</div>
-                <h3 className="font-semibold text-wellness-violet mb-2 text-sm">Assessment</h3>
-                <p className="text-xs text-gray-600">Comprehensive evaluation of your needs and goals</p>
+                <h3 className="font-semibold text-wellness-violet mb-2 text-sm">
+                  Assessment
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Comprehensive evaluation of your needs and goals
+                </p>
               </div>
-              
+
               <div className="p-5" data-aos="fade-up" data-aos-delay="800">
                 <div className="text-2xl mb-2">🔧</div>
-                <h3 className="font-semibold text-wellness-violet mb-2 text-sm">Customization</h3>
-                <p className="text-xs text-gray-600">Tailored combination of therapeutic approaches</p>
+                <h3 className="font-semibold text-wellness-violet mb-2 text-sm">
+                  Customization
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Tailored combination of therapeutic approaches
+                </p>
               </div>
-              
+
               <div className="p-5" data-aos="fade-up" data-aos-delay="1000">
                 <div className="text-2xl mb-2">📈</div>
-                <h3 className="font-semibold text-wellness-violet mb-2 text-sm">Adaptation</h3>
-                <p className="text-xs text-gray-600">Continuous refinement based on your progress</p>
+                <h3 className="font-semibold text-wellness-violet mb-2 text-sm">
+                  Adaptation
+                </h3>
+                <p className="text-xs text-gray-600">
+                  Continuous refinement based on your progress
+                </p>
               </div>
             </div>
           </div>
@@ -301,19 +407,26 @@ const Approach = () => {
               Experience Our Therapeutic Approach
             </h2>
             <p className="text-lg text-white/90 mb-6 leading-relaxed">
-              Discover how our evidence-based, personalized approach can support your journey 
-              toward healing, growth, and lasting positive change.
+              Discover how our evidence-based, personalized approach can support
+              your journey toward healing, growth, and lasting positive change.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/contact">
-                <Button size="lg" className="bg-white text-wellness-violet hover:bg-white/90 px-3 py-3 rounded-full font-semibold text-base">
+                <Button
+                  size="lg"
+                  className="bg-white text-wellness-violet hover:bg-white/90 px-3 py-3 rounded-full font-semibold text-base"
+                >
                   Schedule a Consultation
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" size="lg" className="border-white text-wellness-violet hover:bg-white hover:text-wellness-violet px-6 py-3 rounded-full font-semibold text-base">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-white text-wellness-violet hover:bg-white hover:text-wellness-violet px-6 py-3 rounded-full font-semibold text-base"
+                >
                   View Our Services
                 </Button>
               </Link>

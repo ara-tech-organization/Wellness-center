@@ -16,52 +16,50 @@ const About = () => {
   return (
     <div>
       {/* -- meta tags starts -- */}
-            <Helmet>
-              <title>
-               About - Adhi Mind Wellness Centre
-              </title>
-              <meta
-                name="description"
-                content="Adhi Mind Wellness Centre in Thanjavur offers counselling, life coaching, and mental wellness services for stress, trauma, personal growth, and emotional healing."
-              />
-              <meta
-                name="keywords"
-                content="Adhi Mind Wellness Centre, counselling in Thanjavur, life coaching, stress management, trauma healing, mental wellness Tamil Nadu"
-              />
-              <meta name="author" content="Adhi Mind Wellness Centre" />
-      
-              {/* Open Graph (for social media) */}
-              <meta
-                property="og:title"
-                content="Adhi Mind Wellness Centre - Transform Within, Thrive Beyond"
-              />
-              <meta
-                property="og:description"
-                content="Discover counselling, life coaching, and emotional healing at Adhi Mind Wellness Centre in Thanjavur."
-              />
-              <meta
-                property="og:image"
-                content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
-              />
-              <meta property="og:url" content="https://adhimindwellnesscentre.com/" />
-              <meta property="og:type" content="website" />
-      
-              {/* Twitter Card */}
-              <meta name="twitter:card" content="summary_large_image" />
-              <meta
-                name="twitter:title"
-                content="Adhi Mind Wellness Centre - Mental Wellness in Thanjavur"
-              />
-              <meta
-                name="twitter:description"
-                content="Counselling, life coaching & emotional healing in Thanjavur."
-              />
-              <meta
-                name="twitter:image"
-                content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
-              />
-            </Helmet>
-            {/*-- meta tags ends -- */}
+      <Helmet>
+        <title>About - Adhi Mind Wellness Centre</title>
+        <meta
+          name="description"
+          content="Adhi Mind Wellness Centre in Thanjavur offers counselling, life coaching, and mental wellness services for stress, trauma, personal growth, and emotional healing."
+        />
+        <meta
+          name="keywords"
+          content="Adhi Mind Wellness Centre, counselling in Thanjavur, life coaching, stress management, trauma healing, mental wellness Tamil Nadu"
+        />
+        <meta name="author" content="Adhi Mind Wellness Centre" />
+
+        {/* Open Graph (for social media) */}
+        <meta
+          property="og:title"
+          content="Adhi Mind Wellness Centre - Transform Within, Thrive Beyond"
+        />
+        <meta
+          property="og:description"
+          content="Discover counselling, life coaching, and emotional healing at Adhi Mind Wellness Centre in Thanjavur."
+        />
+        <meta
+          property="og:image"
+          content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
+        />
+        <meta property="og:url" content="https://adhimindwellnesscentre.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Adhi Mind Wellness Centre - Mental Wellness in Thanjavur"
+        />
+        <meta
+          name="twitter:description"
+          content="Counselling, life coaching & emotional healing in Thanjavur."
+        />
+        <meta
+          name="twitter:image"
+          content="https://adhimindwellnesscentre.com/lovable-uploads/18.jpeg"
+        />
+      </Helmet>
+      {/*-- meta tags ends -- */}
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-gradient-to-br from-wellness-violet to-wellness-lavender text-white relative overflow-hidden">
         {/* Background Image */}
@@ -97,15 +95,15 @@ const About = () => {
               About Adhi Mind Wellness Centre
             </h2>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              Welcome to Aadhi Mind Wellness Centre, your sanctuary for
-              emotional healing, mental wellness, and personal transformation.
-              Our mission is to guide you on a journey to inner strength and
-              lasting happiness. Whether you’re navigating stress, managing
-              trauma, or seeking personal growth, we are here to provide
-              compassionate care that helps you thrive in every aspect of life.
+              Welcome to Adhi Mind Wellness Centre, your sanctuary for emotional
+              healing, mental wellness, and personal transformation. Our mission
+              is to guide you on a journey to inner strength and lasting
+              happiness. Whether you’re navigating stress, managing trauma, or
+              seeking personal growth, we are here to provide compassionate care
+              that helps you thrive in every aspect of life.
             </p>
             <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-              At Aadhi, we believe every individual deserves a life filled with
+              At Adhi, we believe every individual deserves a life filled with
               purpose, joy, and authentic happiness. Our approach blends
               therapeutic methods with understanding and empathy, creating a
               non-judgmental, safe space for exploration and healing. Here, we
@@ -131,7 +129,7 @@ const About = () => {
             {/* Left: Text */}
             <div data-aos="fade-right" className="space-y-5">
               <h2 className="text-3xl md:text-4xl font-bold text-wellness-violet">
-                About K. Adhilakshmi
+                About the Founder K. Adhilakshmi
               </h2>
               <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 K. Adhilakshmi is a passionate mental health professional and
@@ -150,9 +148,9 @@ const About = () => {
                 and helping them achieve meaningful transformation in mindset,
                 self-worth, and life goals.
               </p>
-              <p className="text-sm italic text-gray-600">
+              {/* <p className="text-sm italic text-gray-600">
                 “Kindness is the language of healing.”
-              </p>
+              </p> */}
             </div>
 
             {/* Right: Image */}
@@ -163,6 +161,59 @@ const About = () => {
                 className="rounded-2xl shadow-xl w-full max-w-md h-auto object-cover"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-gradient-to-br from-wellness-light-purple to-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div
+            className="max-w-5xl mx-auto text-center space-y-6"
+            data-aos="fade-up"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-wellness-violet mb-4">
+              Founder’s Perspective
+            </h2>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              The purpose of starting Adhi Mind Wellness Centre is to support
+              fellow human beings in empowering themselves to achieve clarity
+              and peace of mind. I have always dreamt of helping people live
+              better lives, and this centre is a step toward making that dream a
+              reality.
+            </p>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              For me, if love could be defined in one word, it would be
+              kindness. I hold an unwavering belief that kindness has the power
+              to cultivate integrity, harmony, and peace among all human beings.
+              True to this belief, I approach my clients with kindness,
+              compassion, and empathy — not just as values, but as guiding
+              principles in my work.
+            </p>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              I am dedicated to guiding individuals toward the right course of
+              action that leads to positive transformation.
+            </p>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              At Adhi Mind Wellness Centre, I integrate both counselling and
+              coaching practices, offering emotional healing and practical
+              guidance to help individuals thrive at every stage of their
+              personal journey.
+            </p>
+            <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              At the core of my work is a commitment to holistic well-being —
+              mental, emotional, and personal. I firmly believe that nurturing
+              others is the true nature of humankind, and I am honoured to walk
+              alongside my clients as they rediscover their strength and thrive
+              in life.
+            </p>
+            {/* <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              For me, if love could be defined in one word, it would be
+              “Kindness.” I have an unwavering belief that kindness holds the
+              power to cultivate integrity, harmony, and peace among all human
+              beings. True to this belief, I approach my clients with kindness,
+              compassion, and empathy — not just as values, but as guiding
+              principles in my work.
+            </p> */}
           </div>
         </div>
       </section>
